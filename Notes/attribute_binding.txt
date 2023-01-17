@@ -1,0 +1,25 @@
+--- Attribute Binding ---
+
+1. Attribute Binding is a unidirectional - one-way data Binding
+
+2. Syntax -> [attr.attribute_name]="expression"
+
+3. The functinality may seem almost similar to property Binding
+
+4. One of the most important Q asked in interviews is
+
+    -> What is the difference between property binding and attr binding
+
+        [ngClass]="expression" // property binding
+
+        [attr.className]="c1" // attribute binding
+
+    -> some attribute are not natively supported for elements
+
+        e.g -> colspan // not natively supported
+                -> [colspan]="colVal" // error
+                -> [attr.colspan]="colVal" // no error
+    -> Angular encourages to use property binding
+        -> attribute binding
+
+5. 

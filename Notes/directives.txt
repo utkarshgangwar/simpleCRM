@@ -1,0 +1,33 @@
+--- Directives ---
+
+    1. Directive is a way to extend our HTML including both view as well as behaviour
+    2. Directive are used to extend the power of the HTML.
+    3. They can extend, change or modify behaviour of any DOM elements.
+
+    3 types:
+        1. Component Directives (default app)
+            - Every Angular application must have at least 1 Component
+            - Have it's own templates
+            - Events attached ( Event Bindig )
+
+        2. Structural Directives
+            - Updates structure of the view
+            - ngFor
+            - ngIf
+            - ngSwitch
+
+        3. Attribute Directives
+            - ngStyle
+            - ngClass
+        
+    How to generate Directives
+        -> ng generate component <component_name>
+        -> ng generate directive <directive_name>
+
+    4. Examples
+        AppComponent -> Component Directive
+
+    5. Custom Directives
+
+        ng g directive highlight
+        - This is an advance topic, we'll revisit this topic again once we have our foundations better

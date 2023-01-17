@@ -1,0 +1,10 @@
+--- ngSwitch ---
+
+<div [ngSwitch]="switch_expression">
+    <div *ngSwitchCase="match_expression_1">...</div>
+    <div *ngSwitchCase="match_expression_2">...</div>
+    <div *ngSwitchCase="match_expression_3">...</div>
+    <div *ngSwitchCase="match_expression_4">...</div>
+    ...
+    <div *ngSwitchDefault>...</div>
+</div>

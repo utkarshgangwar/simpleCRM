@@ -1,0 +1,345 @@
+--- Bootstrap, material ---
+
+
+--- folder structure ---
+
+1. Project folder <blog>
+
+    ng new <project_name>
+
+2. e2e
+    - Protractor framework
+        - by default
+    - end to end test scripts
+    - will end with .e2e-specs.ts extension
+    src
+        app.e2e-specs.ts
+        login.e2e-specs.ts
+    protractor.conf.js
+        -> configuration settings for running the end to end test scripts
+    tsconfig.json
+        -> basic typescript settings
+
+3. src
+    - entire source code of your application is inside src 
+    - app module 
+        app.module.ts
+        - app component 
+            - app.component.html -> view/ui/html code
+            - app.component.scss/css -> stylesheet
+            - app.component.spec.ts -> unit test script 
+            - app.component.ts -> class file
+    -assests 
+        - images 
+        - mock data 
+        - apis 
+        - 
+    - environments 
+        - local
+        - dev 
+        - qa 
+        - uat 
+        - prod 
+
+    - favicon.ico 
+
+    - index.html 
+        Single Page Application 
+            index.html 
+                <app-root>
+    - main.ts 
+        - bootstrapModule
+            - AppModule
+                - 
+        - Starting point of your application
+        -  Any other module in our Bootstrap
+            - No mandoaroty that it shoudl be AppModule 
+
+    - polyfills.ts 
+        supporitng older browsers
+
+    - styles.scss/css
+        - global/common stylesheet for elements
+            a {
+
+            }
+        
+        
+    - test.ts 
+        - test script for the main.ts file
+        - testing the main.ts file code 
+
+    - angular.json 
+        -> backbone of your application
+            -> scripts
+            -> ports
+            -> settings
+            -> schematics
+                -> angular cli commands
+                -> build commands
+                -> test commands
+
+    - karma.conf.js 
+        -> spec.ts
+        -> tests script runner
+        -> running or executing all our test scripts
+
+    - package.json & package-lock.json 
+
+    - tsconfig
+        -> build output directory
+        -> sourcemap
+
+    - tslint
+        - enforce coding standards
+        - 
+        - how the error/warning/etc should be
+
+--- Boot Process of Angular Apps ---
+
+            ng serve
+                - compiling the app
+                - main.ts
+                    - bootstrapModule
+                        - AppModule
+                            - AppComponent
+                        - AuthModule
+                            - Login 
+                            - CheckAuthentication
+                            - Forgot
+                            - NewUser
+                            - LoggedIn
+                
+                - test.ts
+                    - test scripts for main.ts
+
+                index.html (flow)
+                    AppModule
+                        AppComponent
+                            <app-root>
+
+                Whenever we do a ng serve/build/test
+
+                    Compile your typescript into Javascript code
+                        - Transpiling
+
+                        main.js
+                        polyfills.js
+                        main.js
+                        runtime.js
+                        vendor.js
+                        style.js
+
+
+--- package.json & package-lock.json ---
+
+        Pacjage.json
+            name of app
+            version of app
+
+            scripts
+                -> "npm run start"
+                    -> ng serve
+                        -> angular.json
+                        
+                -> can we add more scripts to package.json?
+                    - YES YES YES
+
+                -> scripts are your starting point of learning
+                    - existing projects
+
+            Dependencies
+                -> all the modules/libraries you MUST have yo run in prod env
+                -> the prod code will mostly be optimized/minimum
+            devDependencies
+                -> all the modules/libraries you MUST to develop your app
+                -> we may add packages/modules but we may not use them
+
+        Pacjage-lock.json
+                -> details of the package installed
+                -> internally required modules
+                -> internal linking of requires of different libraries
+
+--- Angular CLI ---    
+        - command line interface
+
+        - schematics -> angular.json/package.json
+            ng serve
+            ng build
+            ng test
+            ng lint
+            ng e2e
+
+        - commands
+
+            ng new <project_name>
+
+            ng generate coponent <component_name>
+            ng generate module <module_name>
+            ng generate pipe <pipe_name>
+
+        angular.json
+
+            demo
+                ng serve
+                    -> compiled
+                    -> ready to launch
+
+                ng test
+                    -> to test our app
+                    - test and run all our unit test scripts
+                
+                ng e2e
+                    - test and run end to end tests
+
+                ng lint
+
+                ng build
+                    -> build your app and make it ready for production env deployment
+                    -> dist <simpleCRM>
+                        vendor.js
+                        main.js
+                        style.css
+                        ...
+
+                ng generate
+                    -> generate building blocks of Angular
+                    components
+                    pipes
+                    modules
+                    servies
+                    directives
+                    applications
+                    ...
+
+--- App Architecture ---
+
+    - Modular Based Architecture
+    - Components mapped inside modules
+    - Common libs for shared components
+    - Multiple Apps inside the repo
+
+    explanation:
+
+            CRM Application
+
+                    src
+                        contacts -> module
+                            add-contact -> components inside module
+                            edit-contact -> components inside module
+                            delete-contact -> components inside module
+                            view-contact -> components inside module
+                            ...
+                        users -> module
+                            add-user -> components inside module
+                            ...
+                        orders
+                        leads
+                        reports
+                        settings
+                        profile
+
+                        shared
+                            auth
+                            tokens
+                            ...
+
+                        services -> HTTP/ Reusable code
+                            contact-service.ts
+                            user-service.ts
+                            ...
+
+                        assests
+                            images
+                            mock-data
+                            ...
+
+                        pipes
+                            higlight-pipe
+
+--- Angular Modules ---
+
+    1. Angular is a modular-based architecture
+        - There are lot of modules which are built-in
+        - Examples
+            - BrowserModule
+            - BrowserAnimationsModule
+
+        - Angular Material Library
+            - MatButtonModule
+            - MatDropDownModule
+    2. All the code and functionality is grouped in a module
+
+    3. Whenver you see a @ symbol - it's a decorator
+
+    4. What module consist?
+        - declarations
+            - this is where we will add all the components of the module.
+
+        - imports
+            - we can import modules insede a module
+
+        - providers
+            - services that we need will be injected here
+
+        - Bootstrap
+            - what is the first component the module should load
+
+        - exports
+            - is to export and expose the component outside of the module
+    
+    5. Every Angular application should have atleast 1 module
+
+    6. By default, the Angular framewrok provides us with AppModule
+
+    7. The AppModule will have a 1 component by the name
+        - AppComponent
+
+    8. Whenver we are building Angular applications
+        - we will always think of Modules first
+
+        E.g
+            Contacts
+            Users
+            Leads
+            Opportunities
+            Settings
+            Profile
+            Authentication
+
+        Free User
+            Contacts
+            Users
+        Premium User
+            Contacts
+            Users
+            Leads
+            Opportunities
+        Enterprise Users
+            Contacts
+            Users
+            Leads
+            Opportunities
+            Settings
+            Profile
+            Authentication
+
+    9. Feature Modules
+        - You can turn on or off the modules based on conditions
+
+    10. Modules - Grouping
+        - components
+        - services
+        - pipes
+        - directives
+
+    11. Create a custom Module
+        ng generate module contacts
+        ng generate module leads
+        ng generate module profile
+        ng generate module settings
+        ng generate module authentication
+                    
+
+
+ 

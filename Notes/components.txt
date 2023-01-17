@@ -1,0 +1,53 @@
+--- Angular Components ---
+
+1. Components are the most important and basic building blocks of Angular apps.
+
+2. Authentication Module
+    - new-user
+    - login
+    - forgot-password
+    - reset-password
+
+3. Component is a smallest functionality that you will implement in your applicationh
+
+4. When we group multiple Components together is becomes a module
+
+5. We can have parent-child relationship
+
+6. We can have components inside components
+
+7. Tree-herirachy of components
+
+    Dashboard
+        display-contacts-list
+            contact-grid                
+                contact-download
+                contact-export
+            contact-options
+
+8. lets create some custom components
+    ng g component add-contact
+    ng g component edit-contact
+    ng g component list-contacts
+    ng g component delete-contact
+
+9. Every coponent has 4 files auto generated with it
+    - component.html        -> view or html or template file -> UI
+    - component.ts          -> it will be a class file which will have methods -> Logic
+    - component.spec.ts     -> It will have the unit test script for component
+    - component.sccs/css    -> stylesheet of the component
+
+    HOMEWORK
+        -> verify all the components generated and go through the code generated
+
+10. Component decorator inside the component.ts file
+
+    selector -> unique identifier for the component
+             -> id of the component
+             -> using this selector we will use the component
+    templateUrl -> your HTML code
+                -> component.html file
+            RARE -> if small html file then,
+                 -> template: `<h1>This is title</h1>`
+    styleUrls -> for linking your component stylesheet
+        -component.css/scss

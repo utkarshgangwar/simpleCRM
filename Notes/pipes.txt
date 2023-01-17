@@ -1,0 +1,26 @@
+--- Pipes ---
+
+1. Pipes are used to transform the data
+
+2. Pipes will take data input and convert/transform into a desired format
+
+3. Pipes are written using the pipe operator (|)
+
+4. We can apply pipes to any view/templates and to any data inputs
+
+5. Types of Pipes
+
+    -> Built in pipes
+        - Lowercase
+        - Uppercase
+        - Currency
+        - Date
+
+    -> Parametrized Pipes
+        - We can pass one or more parameters to pipes
+
+    -> Chaining Pipes
+        - We can connect multiple pipes to a data input
+
+    -> Custom Pipes
+        - We can create our own custom pipes for various data formatting

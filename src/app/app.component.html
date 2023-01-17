@@ -1,0 +1,236 @@
+<!-- <h1 class="c1">{{title}}</h1>
+
+<div [ngClass]="'c1'">This is ngClass Example</div>
+
+<div [ngClass]="'c1 c2'">This is ngClass using multiple classes Example</div>
+
+<div [ngClass]="styleClsProp">This is ngClass using variable Example</div>
+
+<div [ngClass]="conditionClsProp=='c4'? 'c4' : 'c5'">This is ngClass using conditional check Example</div>
+
+<div [ngClass]="{c4: true, c5: true}">This is ngClass using Object Example</div>
+
+<div [ngClass]="getClsName()">This is ngClass Example</div>
+
+
+
+<h2>ngIf example</h2> -->
+
+
+<!-- if -->
+<!-- <div class="bg-success c2" *ngIf="success_msg && success_flag">
+    user added successfully
+</div> -->
+
+<!-- with ! -->
+<!-- <div class="bg-success c2" *ngIf="!success_msg">
+    !success_msg
+</div> -->
+
+<!-- if else -->
+<!-- <div class="bg-success c2" *ngIf="success_msg; else error_msg">
+    !success_msg
+</div> -->
+
+<!-- if then else -->
+<!-- <div class="bg-success c2" *ngIf="success_msg; then update_msg; else error_msg">
+</div>
+
+<ng-template #update_msg>
+    user was updated
+</ng-template> -->
+
+<!-- built in directive eith reference name -> ng-template -->
+<!-- <ng-template #error_msg>
+    User was not added
+</ng-template>
+
+
+<h2>ngFor example</h2>
+<ul>
+
+    <li *ngFor="let contact of contacts; index as i; first as f; last as l">
+        <div *ngIf="f" style="background-color: lightgreen;">this is first record</div>
+        <div>
+            {{i}} {{contact.firstName}} {{contact.lastName}}
+        </div>
+        <div *ngIf="l" style="background-color: lightblue;">this is last record</div>
+    </li>
+</ul>
+
+<p>New table with even and odd</p>
+<ul>
+
+    <li *ngFor="let contact of contacts; even as e; odd as o">
+        <div *ngIf="e" style="background-color: #ddd;">
+            {{i}} {{contact.firstName}} {{contact.lastName}}
+        </div>
+        <div *ngIf="o" style="background-color: lightyellow;">
+            {{i}} {{contact.firstName}} {{contact.lastName}}
+        </div>
+    </li>
+</ul>
+
+<h4>Learning ngSwitch</h4>
+
+<div [ngSwitch]="superPower">
+    <div *ngSwitchCase="'wonderWoman'">Display Wonder woman super powers</div>
+    <div *ngSwitchCase="'superMan'">Display superMan super powers</div>
+    <div *ngSwitchCase="'heMan'">Display heMan super powers</div>
+    <div *ngSwitchCase="'SpiderMan'">Display SpiderMan super powers</div>
+    <div *ngSwitchDefault>Super power is in learning</div>
+</div>
+
+<div [ngSwitch]="tax">
+    <div *ngSwitchCase="10">Tax is 10</div>
+    <div *ngSwitchCase="50">Tax is 30</div>
+    <div *ngSwitchDefault>No TAX </div>
+</div>
+
+<h3>Learning ngStyle</h3>
+
+<div [ngStyle]="{'background-color':'green', 'color':'#fff'}"> This is green DIV </div>
+
+<div [ngStyle]="{'background-color': styleProp}">This is dynamic color DIV</div>
+
+<div [ngStyle]="{'color': txtColor === 'blue' ? 'blue' : 'green'}">
+    This is conditional color DIV
+</div>
+
+<h1>Data Binding</h1>
+
+<h2>Interpolation</h2>
+
+<div>{{ pageHeading }}</div>
+
+<div>{{ pageCount }}</div>
+
+<div>{{ userObject.firstName }} {{ userObject.lastName }}</div>
+
+<h3>Interpolation with *ngIf</h3>
+
+<div *ngIf="isUserLoggedIn">
+    {{ userObject.firstName }} {{ userObject.lastName }}
+</div>
+
+<h3>Interpolation with *ngFor</h3>
+<table>
+    <tr>
+        <th>ContactId</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+    </tr>
+    <tr *ngFor="let contact of contacts">
+        <td>{{contact.contactId}}</td>
+        <td>{{contact.firstName}} </td>
+        <td>{{contact.lastName}} </td>
+    </tr>
+</table>
+
+<div [ngSwitch]="superPower">
+    <div *ngSwitchCase="'wonderWoman'">Display Wonder woman super powers</div>
+    <div *ngSwitchCase="'superMan'">Display superMan super powers</div>
+    <div *ngSwitchCase="'heMan'">Display heMan super powers</div>
+    <div *ngSwitchCase="'SpiderMan'">Display SpiderMan super powers</div>
+    <div [ngClass]="getBatman()" *ngSwitchCase="'Batman'">{{Batman}}</div>
+    <div *ngSwitchDefault>Super power is in learning</div>
+</div>
+
+<h2>Property Binding</h2>
+
+<p [style.color]="txtColorVal"> Page Count Value is {{ pageCount }}</p>
+
+<img [src]="imgUrl" [alt]="imgAlt" />
+
+<div *ngIf="isUserLoggedIn">
+    <div [innerHTML]="userObject.firstName"></div>
+</div>
+
+<table>
+    <tr>
+        <th>ContactId</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+    </tr>
+    <tr *ngFor="let contact of contacts">
+        <td [title]="contact.contactId">{{contact.contactId}}</td>
+        <td [title]="contact.firstName">{{contact.firstName}} </td>
+        <td>{{contact.lastName}} </td>
+    </tr>
+</table>
+
+<h2>Attribute Binding</h2>
+
+<table style="background-color: black; color: white;">
+    <tr>
+        <td>ContactId</td>
+        <td>Contact Name</td>
+        <td>Contact Email</td>
+    </tr>
+    <tr>
+        <td [attr.colspan]="colVal">ContactId</td>
+        <td>Contact Email</td>
+    </tr>
+</table>
+
+<h2>Event Binding</h2>
+
+<button (click)="sayHellow()">Click to say Hellow</button>
+
+<div (mouseover)="higlightBGcolor(1, 3, 4)">Higlight me please</div>
+
+<input type="text" (focus)="inputBox()">
+
+<h2>Two - way data binding</h2>
+
+<input [(ngModel)]="username" />
+
+<div *ngIf="month > 10">{{ username }}</div> -->
+
+<!-- 
+    Angular Built-in Pipes
+ -->
+
+<!-- <h2>Built-In Pipes</h2>
+
+<div> {{ lowerCaseExample | lowercase}} </div>
+<div> {{ upperCaseExample | uppercase}} </div>
+<div> {{ dateExample | date}} </div>
+<div> {{ jsonExample | json}} </div>
+<div> {{ currencyExample | currency}} </div>
+<div> {{ percentExample | percent}} </div> -->
+
+<!-- 
+    Angular Parametrized Pipes
+ -->
+
+<!-- <h2>Parametrized Pipes</h2>
+
+<div> {{ currencyExample | currency: 'INR'}} </div>
+<div> {{ currencyExample | currency: 'USD'}} </div>
+<div> {{ currencyExample | currency: 'CAD'}} </div>
+
+<div> {{ dateExample | date: 'short'}} </div>
+<div> {{ dateExample | date: 'long'}} </div>
+<div> {{ dateExample | date: 'MMM-dd-yy'}} </div>
+
+<div> {{ percentExample | percent: '3.2-2'}} </div> -->
+
+<!-- 
+    Chaining Pipes
+ -->
+
+<!-- <h2>Chaining of Pipes</h2>
+
+<div>{{dateExample | date | uppercase}}</div>
+
+<div> {{ currencyExample | currency: 'CAD' | lowercase}} </div>
+<div> {{ currencyExample | currency: 'CAD'}} </div> -->
+
+<h1>This is an Angular Application router-outlet</h1>
+<!-- Primary router outlet -->
+<router-outlet></router-outlet> 
+
+<!-- <router-outlet name="addLoan"></router-outlet> -->
+
+<!-- <router-outlet name="editLoan"></router-outlet> -->

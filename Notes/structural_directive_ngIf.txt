@@ -1,0 +1,18 @@
+--- ngIf ---
+
+1. It will always have * asterik symbol
+2. Built in Structural Directive
+3. The ngIf condition will evaluate the expression and result true or false
+4. We can user OR (||), AND (&&) and we can also use NOT (!) operators inside ngIf 
+
+5. We can have multiple use cases
+
+    - ngIf -> done
+        -> logical operators
+            OR (||)
+            AND &&)
+            NOT (!)
+
+    - ngIf else ->
+
+    - ngIf then else ->

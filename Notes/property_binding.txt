@@ -1,0 +1,26 @@
+--- Property Binding ---
+
+1. We write the Property in square brackets [property_name]="..."
+
+2. Its a one-data Binding
+
+3. We can bind any/multiple properties to an DOM element.
+    for e.g [title]=""
+    innerHTML
+    src
+    alt
+    title
+
+4. Bind any HTML property of DOM elements
+
+5. Go to w3schools.com -> HTML tutorials -> property HTML elements
+
+6. Real Time use cases
+
+    6.1 Dynamic table colums
+        -> colCount
+    6.2 Linking of Images from AWS s3 buckets
+        -> 
+    6.3 Ofcourse binding of style properties
+
+

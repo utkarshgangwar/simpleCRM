@@ -1,0 +1,16 @@
+--- Structural Directives ---
+
+1. Structural Directives will help us in extending, adding, or removing elements
+
+2. DOM Manipulation
+
+3. 3 types of Structural Directives
+
+    ngIf
+    ngFor
+    ngSwitch
+
+4. asterik means its a built in Structural Directive
+
+E.g nfIf
+    <div *ngIf="<condition>"> Value 1 </div>

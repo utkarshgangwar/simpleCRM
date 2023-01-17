@@ -1,0 +1,40 @@
+--- Data Binding ---
+
+1. Each component
+    <comp_name>.component.html -> vew/HTML/UI
+    <comp_name>.component.css -> classNames
+    <comp_name>.component.ts    -> what data to be displayed/expressions
+    <comp_name>.component.spec.ts
+
+2. Data is spread throughout these files
+
+3. Data Binding interacting with data of the component
+
+4. Data can be from component to template   -> one way
+
+5. Data can be from template to component   -> one way
+
+6. Two way -> to/from component
+              from/to template
+
+7. One way/Two way is nothing but representation of data flow
+
+    -> one way
+
+    -> two way
+    <- two way
+
+---------------------------------------------------------------------
+
+One-way Data Binding
+    - component to view
+        - Interpolation
+        - Property Binding
+        - Style Binding
+        - Attribute Binding
+    
+    - view to component
+        - Event Binding
+    
+Two-way Data Binding
+    - Data flows from view to component and back to component fromt the view

@@ -1,0 +1,6 @@
+--- Chaining of Pipes ---
+
+1. Using multiple pipes on a data input is called as Chaining Pipes
+
+2. We can pass one or more pipes to a dta input
+    -> {{dob | date | uppercase}

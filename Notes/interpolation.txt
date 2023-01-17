@@ -1,0 +1,12 @@
+--- Interpolation ---
+
+1. Common mistakes
+    - qoutes/single/doubles around the variables
+
+    ngIf -> Interpolation
+    ngFor -> Interpolation
+    ngSwitch -> Homework
+
+2. same name should be given - whatever is given in component
+
+3. 

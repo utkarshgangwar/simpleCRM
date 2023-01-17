@@ -1,0 +1,55 @@
+--- Router ---
+
+1. Angular Router
+    - Routing is a mechanism used by Angular Framework to manage the "paths" and "routes" of our Angular applications
+
+    - Routing strategy helps in navgation between various views in our Angular applications
+    
+    - Angular Framework comes with "Router" Module which has everthing we need to design, and develop and implement routes and navigation links
+
+    - Touter is a singleton - which means there is ONLY one instance of the router in our Angular applications
+
+2. Routing in Angular 
+    - Angular Router is the official Router module which is written and maitained by core Angular team
+
+    - The Router module is found in the package @angular/router
+
+    - We need to setup Router array - every time a request is made, the router will search in the list of array and find the most relevant match.
+
+    - Router has states - which helps us get impotant ifnformation about the current state and data related to routes.
+
+3. Uses cases
+    - Routes for components
+    - Getting Query Params from routes
+    - Getting the URL segments
+    - Loading child routes for a module
+    - Lazy Loading
+    - Hangling wild card routes
+    - Handling defualt routes
+    - Handling 404 routes
+    - ...
+
+4. All batteries included for Router
+
+-----------------------------------------------------------------------------------------------------------
+
+5. Practical
+
+    Home -> http://myapplication.com/ - Root -> Default Route
+
+    Profile -> http://myapplication.com/profile - Componet routing
+
+    Search -> http://myapplicatin.com/search?user=abc - Query param
+
+    Tasks -> http://myapplicatin.com/tasks/10/category/pending - URL Segments
+
+    Users -> http://myapplication.com/Users - Module
+    
+        view-user -> http://myapplication.com/users/view/10 - Child Routes
+        edit-user -> http://myapplication.com/users/eidt/10 - Child Routes
+        add-user -> http://myapplication.com/users/add - Child Routes
+        manage-user -> http://myapplication.com/users/manage - Child Routes
+
+    PageNotFound -> http://myapplicatin.com/pageNotFound -> 404 error -> No matching routes
+
+-----------------------------------------------------------------------------------------------------------

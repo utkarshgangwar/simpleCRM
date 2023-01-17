@@ -1,0 +1,45 @@
+--- Base Href ---
+
+1. Every Angular Application has MANDATORY base Href
+
+2. Angular apps is a SPA which means there will be only one HTML file
+
+3. The default base href if set to "/" the root folder
+
+4. The base HREF is present in index.html file for all Angular applications
+
+5. Wrong configuration leads to pointing to wrong folder root path
+
+6. Setting the base href using the command line --base-href=
+
+7. Syntax: < base href="/" >
+
+---------------------------------------------------------------------------------------
+
+1. Base HREF is MANDATORY for all Angular apps
+
+2. Base HREF is present in your index.html file
+
+3. The project is pointing to the "root" directory/folder to your server which is running at 4200 project
+
+4. When you are deploying you angular application to server
+
+    -> root folder
+---------------------------------------------------------------------------------------
+                        {folder name inside where we want to deploy}
+                          |
+    -> http://myapp.com/app1/
+            |
+        {server root directory}
+---------------------------------------------------------------------------------------
+
+
+        http://myapp.com
+
+5. It decides where you want to deploy your app
+    - thats why its extremely important
+
+6. ng build --base-href="<path>" // later videos
+
+    default 
+        -> <base href="/app1">
